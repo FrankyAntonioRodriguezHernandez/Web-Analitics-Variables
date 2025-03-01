@@ -38,6 +38,13 @@ public class WebsiteDescriptionPK implements Serializable {
         this.day = day;
     }
 
-    
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (websiteId != null ? websiteId.hashCode() : 0);
+        hash += (day != null ? day.hashCode() : 0);
+        return hash;
+    }
+
 
 }
