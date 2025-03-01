@@ -58,5 +58,9 @@ public class WebsiteDescriptionPK implements Serializable {
                 (this.day == null || this.day.equals(other.day));
     }
 
-    
+    @Override
+    public String toString() {
+        return "WebsiteDescriptionPK[ websiteId=" + websiteId + ", day=" + day + " ]";
+    }
+
 }
