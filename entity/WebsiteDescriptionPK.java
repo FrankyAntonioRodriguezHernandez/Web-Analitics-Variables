@@ -46,5 +46,17 @@ public class WebsiteDescriptionPK implements Serializable {
         return hash;
     }
 
+    @Override
+    public boolean equals(Object object) {
+        if (!(object instanceof WebsiteDescriptionPK)) {
+            return false;
+        }
+        WebsiteDescriptionPK other = (WebsiteDescriptionPK) object;
+        return (this.websiteId != null || other.websiteId == null) &&
+                (this.websiteId == null || this.websiteId.equals(other.websiteId)) &&
+                (this.day != null || other.day == null) &&
+                (this.day == null || this.day.equals(other.day));
+    }
 
+    
 }
