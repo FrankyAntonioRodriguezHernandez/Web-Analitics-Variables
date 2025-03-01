@@ -62,5 +62,4 @@ public class WebsiteDescriptionPK implements Serializable {
     public String toString() {
         return "WebsiteDescriptionPK[ websiteId=" + websiteId + ", day=" + day + " ]";
     }
-
 }
