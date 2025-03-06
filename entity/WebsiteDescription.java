@@ -89,3 +89,10 @@ public Date getCreated() {
 public void setCreated(Date created) {
     this.created = created;
 }
+
+@Override
+public int hashCode() {
+    int hash = 0;
+    hash += (pk != null ? pk.hashCode() : 0);
+   return hash;
+}
