@@ -96,3 +96,13 @@ public int hashCode() {
     hash += (pk != null ? pk.hashCode() : 0);
    return hash;
 }
+
+@Override
+public boolean equals(Object object) {
+    if (!(object instanceof WebsiteDescription)) {
+        return false;
+    }
+    WebsiteDescription other = (WebsiteDescription) object;
+    return (this.pk != null || other.pk == null) &&
+            (this.pk == null || this.pk.equals(other.pk));
+}
