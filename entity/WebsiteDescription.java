@@ -40,3 +40,18 @@ private int length;
 @Temporal(TemporalType.TIMESTAMP)
 private Date created;
 
+public WebsiteDescription() {}
+
+public WebsiteDescription(WebsiteDescriptionPK pk) {
+    this.pk = pk;
+}
+public WebsiteDescription(WebsiteDescriptionPK pk, String description, int length) {
+    this.pk = pk;
+    this.description = description;
+    this.length = description.length();
+}
+public WebsiteDescription(Long websiteId, String day, String description, int length) {
+    this.pk = new WebsiteDescriptionPK(websiteId, day);
+    this.description = description;
+    this.length = description.length();
+}
