@@ -45,13 +45,47 @@ public WebsiteDescription() {}
 public WebsiteDescription(WebsiteDescriptionPK pk) {
     this.pk = pk;
 }
+
 public WebsiteDescription(WebsiteDescriptionPK pk, String description, int length) {
     this.pk = pk;
     this.description = description;
     this.length = description.length();
 }
+
 public WebsiteDescription(Long websiteId, String day, String description, int length) {
     this.pk = new WebsiteDescriptionPK(websiteId, day);
     this.description = description;
     this.length = description.length();
+}
+
+public String getDay() {
+    return pk.getDay();
+}
+
+public WebsiteDescriptionPK getPk() {
+    return pk;
+}
+
+public void setPk(WebsiteDescriptionPK pk) {
+    this.pk = pk;
+}
+public String getDescription() {
+    return description;
+}
+public void setDescription(String description) {
+    this.description = description;
+    this.length = description.length();
+}
+public int getLength() {
+    return length;
+}
+public void setLength(int length) {
+    this.length = length;
+}
+public Date getCreated() {
+    return created;
+}
+
+public void setCreated(Date created) {
+    this.created = created;
 }
