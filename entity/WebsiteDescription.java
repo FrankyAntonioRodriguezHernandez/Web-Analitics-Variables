@@ -106,3 +106,9 @@ public boolean equals(Object object) {
     return (this.pk != null || other.pk == null) &&
             (this.pk == null || this.pk.equals(other.pk));
 }
+
+@Override
+public String toString() {
+    return "cu.redcuba.entity.WebsiteDescription[ pk=" + pk + " ]";
+}
+}
