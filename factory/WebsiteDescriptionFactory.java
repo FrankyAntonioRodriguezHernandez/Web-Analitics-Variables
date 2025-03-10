@@ -11,4 +11,10 @@ import java.util.List;
 @Component
 public class WebsiteDescriptionFactory {
 
+    private final WebsiteDescriptionRepository websiteDescriptionRepository;
+
+    @Autowired
+    public WebsiteDescriptionFactory(WebsiteDescriptionRepository websiteDescriptionRepository) {
+        this.websiteDescriptionRepository = websiteDescriptionRepository;
+    }
 }
