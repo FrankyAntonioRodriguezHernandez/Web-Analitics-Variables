@@ -27,7 +27,6 @@ public class WebsiteDescriptionFactory {
             WebsiteDescription websiteDescription = new WebsiteDescription(websiteId, day, description, length);
             websiteDescriptionRepository.save(websiteDescription);
         } catch (Exception ignored) {
-
         }
     }
 }
