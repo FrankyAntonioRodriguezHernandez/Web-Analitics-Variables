@@ -27,5 +27,14 @@ public class WebsiteTitlePK implements Serializable{
     public void setWebsiteId(Long websiteId) {
         this.websiteId = websiteId;
     }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
     
 }
