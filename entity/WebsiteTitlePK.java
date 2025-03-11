@@ -55,4 +55,9 @@ public class WebsiteTitlePK implements Serializable{
                 (this.day != null || other.day == null) &&
                 (this.day == null || this.day.equals(other.day));
     }
+
+    @Override
+    public String toString() {
+        return "WebsiteTitlePK[ websiteId=" + websiteId + ", day=" + day + " ]";
+    }
 }
