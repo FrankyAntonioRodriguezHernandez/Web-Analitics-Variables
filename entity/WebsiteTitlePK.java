@@ -19,4 +19,13 @@ public class WebsiteTitlePK implements Serializable{
         this.websiteId = websiteId;
         this.day = day;
     }
+
+    public Long getWebsiteId() {
+        return websiteId;
+    }
+
+    public void setWebsiteId(Long websiteId) {
+        this.websiteId = websiteId;
+    }
+    
 }
