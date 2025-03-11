@@ -43,4 +43,16 @@ public class WebsiteTitlePK implements Serializable{
         hash += (day != null ? day.hashCode() : 0);
         return hash;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (!(object instanceof WebsiteTitlePK)) {
+            return false;
+        }
+        WebsiteTitlePK other = (WebsiteTitlePK) object;
+        return (this.websiteId != null || other.websiteId == null) &&
+                (this.websiteId == null || this.websiteId.equals(other.websiteId)) &&
+                (this.day != null || other.day == null) &&
+                (this.day == null || this.day.equals(other.day));
+    }
 }
