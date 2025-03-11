@@ -12,4 +12,11 @@ public class WebsiteTitlePK implements Serializable{
 
     @Column(name = "day", nullable = false)
     protected String day;
+
+    public WebsiteTitlePK() {}
+
+    public WebsiteTitlePK(Long websiteId, String day) {
+        this.websiteId = websiteId;
+        this.day = day;
+    }
 }
