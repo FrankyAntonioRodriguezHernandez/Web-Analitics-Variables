@@ -19,7 +19,7 @@ import java.util.List;
 @NamedQueries({
         @NamedQuery(name = "WebsiteTitle.findAll", query = "SELECT wd FROM WebsiteTitle wd")
 })
-public class WebsiteTitle implements  Serializable{
+public class WebsiteTitle implements  Serializable {
     private static final long serialVersionUID = 1L;
 
     @EmbeddedId
@@ -38,7 +38,8 @@ public class WebsiteTitle implements  Serializable{
     @Temporal(TemporalType.TIMESTAMP)
     private Date created;
 
-    public WebsiteTitle() {}
+    public WebsiteTitle() {
+    }
 
     public WebsiteTitle(WebsiteTitlePK pk) {
         this.pk = pk;
@@ -112,3 +113,10 @@ public class WebsiteTitle implements  Serializable{
         return (this.pk != null || other.pk == null) &&
                 (this.pk == null || this.pk.equals(other.pk));
     }
+
+    @Override
+    public String toString() {
+        return "cu.redcuba.entity.WebsiteTitle[ pk=" + pk + " ]";
+    }
+    
+}
