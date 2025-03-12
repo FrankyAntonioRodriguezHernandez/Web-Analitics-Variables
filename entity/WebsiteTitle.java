@@ -118,5 +118,4 @@ public class WebsiteTitle implements  Serializable {
     public String toString() {
         return "cu.redcuba.entity.WebsiteTitle[ pk=" + pk + " ]";
     }
-    
 }
