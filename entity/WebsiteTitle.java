@@ -102,4 +102,13 @@ public class WebsiteTitle implements  Serializable{
         hash += (pk != null ? pk.hashCode() : 0);
         return hash;
     }
-}
+
+    @Override
+    public boolean equals(Object object) {
+        if (!(object instanceof WebsiteTitle)) {
+            return false;
+        }
+        WebsiteTitle other = (WebsiteTitle) object;
+        return (this.pk != null || other.pk == null) &&
+                (this.pk == null || this.pk.equals(other.pk));
+    }
