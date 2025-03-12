@@ -55,4 +55,44 @@ public class WebsiteTitle implements  Serializable{
         this.title = title;
         this.length = title.length();
     }
+
+    @JsonView(ApiView.class)
+    public String getDay() {
+        return pk.getDay();
+    }
+
+    public WebsiteTitlePK getPk() {
+        return pk;
+    }
+
+    public void setPk(WebsiteTitlePK pk) {
+        this.pk = pk;
+    }
+
+    @JsonView(ApiView.class)
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+        this.length = title.length();
+    }
+
+    @JsonView(ApiView.class)
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
 }
