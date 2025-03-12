@@ -37,4 +37,22 @@ public class WebsiteTitle implements  Serializable{
     @Column(name = "created", insertable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date created;
+
+    public WebsiteTitle() {}
+
+    public WebsiteTitle(WebsiteTitlePK pk) {
+        this.pk = pk;
+    }
+
+    public WebsiteTitle(WebsiteTitlePK pk, String title, int length) {
+        this.pk = pk;
+        this.title = title;
+        this.length = title.length();
+    }
+
+    public WebsiteTitle(Long websiteId, String day, String title, int length) {
+        this.pk = new WebsiteTitlePK(websiteId, day);
+        this.title = title;
+        this.length = title.length();
+    }
 }
